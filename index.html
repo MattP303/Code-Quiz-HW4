@@ -30,11 +30,14 @@
 
         <!-- Quiz Instructions -->
         <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time by 10 seconds!</p>
+       
+        <button onclick="startQuiz()" type="button" class="btn btn-success">Start Quiz</button>
+
     </container>
 
     <!-- Quiz Question Layout -->
     <container id="quizPages">
-        <h2 class="questionHeader">Question</h2>
+        <h2 class="questionHeader"></h2>
         <div class="btn-group-vertical answerOptions">
         
         </div>
@@ -44,7 +47,13 @@
     </container>
 
     <container id="myScorePage">
-        
+        <h2>Game Over!</h2>
+        <h3>Your score is</h3>
+        <h3>Enter Initials:</h3>
+        <label for="playerInitials">Email</label>
+        <input type="text" class="form-control" id="playerInitials" placeholder="Enter Initials">
+        <button type="button" class="btn btn-primary" onclick="saveScore()">Submit</button>
+
     </container>
         <!-- View High Score(s) -->
     <container id="highscorePage">

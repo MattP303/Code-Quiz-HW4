@@ -38,7 +38,7 @@ var questions = [{
     answer: 0
 },{
     question: 'This is a question 6',
-    answerOptionss: ['option1','option2','option3','option4'],
+    answerOptions: ['option1','option2','option3','option4'],
     answer: 0
 },{
     question: 'This is a question 7',
@@ -73,6 +73,7 @@ var questions = [{
 ];
 
 var questionCurrent = 0;
+var currentScore = 0;
 
 var startQuiz = () => {
     $('#homePage').hide();
@@ -80,17 +81,66 @@ var startQuiz = () => {
     $('#myScorePage').hide();
     $('#highscorePage').hide();
     questionCurrent = 0;
-
+    currentScore = 0;
+    askQuestion();
 }
 
 var askQuestion = () => {
-$('.questionHeader').val(questions[questionCurrent].question);
-$('answerOptions').empty();
-questions[questionCurrent].array.forEach(element => {
-    $('answerOptions').append('<button type="button" class="btn btn-primary">' + element + '</button>');
-});
+    const current = questions[questionCurrent];
+$('.questionHeader').text(current.question);
+const optionList = $('.answerOptions');
+optionList.empty();
+for (let index = 0; index < current.answerOptions.length; index++) {
+    var button = $('<button>');
+    button.attr('type','button');
+    button.addClass('btn');
+    button.addClass('btn-primary');
+    button.click(function(){
+        chosenAnswer(index)
+    }
+        );
+    button.text(current.answerOptions[index]);
+    optionList.append(button);
+    // $('answerOptions').append('<button type="button" class="btn btn-primary" onclick="chosenAnswer(' + index +')">' + current.answerOptions[index] + '</button>');
+}
 }
 
-var chosenAnswer = (element) => {
+var chosenAnswer = (index) => {
+    const answer= questions[questionCurrent].answer;
+    if(index===answer){
+        currentScore++;
+        $('.priorAnswer').text('Correct!');
+    } else {
+        $('.priorAnswer').text('Wrong Answer');
+    }
 
+    if(questionCurrent < questions.length-1){
+questionCurrent++;
+askQuestion();
+    } else {
+        // End Quiz
+    $('#homePage').hide();
+    $('#quizPages').hide();
+    $('#myScorePage').show();
+    $('#highscorePage').hide();
+    }
+}
+
+
+var countdownTimerInterval = setInterval(setCountdownTimer, 1000);
+
+var setCountdownTimer=() => {
+        if (time_start)
+        time--;
+        if(time<= 0) {
+        end_quiz();
+        time = 0;   
+        }
+        document.getElementById("timer").innerHTML = time;
+    }
+
+var saveScore = () => {
+    const score=currentScore;
+    const initial=$('#playerInitials').text();
+    var highScores = localStorage.getItem('highScores');
 }
