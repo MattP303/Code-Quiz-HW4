@@ -4,13 +4,7 @@ $('#quizPages').hide();
 $('#myScorePage').hide();
 $('#highscorePage').hide();
 
-// View High Score Button - Goes to Highscore Page
-$('.btn-highscore').click(() => {
-    $('#homePage').hide();
-    $('#quizPages').hide();
-    $('#myScorePage').hide();
-    $('#highscorePage').show();
-});
+
 
 var questions = [{
     question: 'This is a question 1',
@@ -141,6 +135,37 @@ var setCountdownTimer=() => {
 
 var saveScore = () => {
     const score=currentScore;
-    const initial=$('#playerInitials').text();
+    const initial=$('#playerInitials').val();
     var highScores = localStorage.getItem('highScores');
+    highScores = highScores ? highScores.split(',') : [];
+    highScores.push (initial+' - '+score);
+    localStorage.setItem('highScores', highScores.toString());
+    showHighscorePage();
+}
+var showHighscorePage = () => {
+    $('#homePage').hide();
+    $('#quizPages').hide();
+    $('#myScorePage').hide();
+    $('#highscorePage').show();
+    var scoreList = $('.scoreList');
+    scoreList.empty();
+    var highScores = localStorage.getItem('highScores');
+    highScores = highScores ? highScores.split(',') : [];
+    for (let index = 0; index < highScores.length; index++) {
+        var line = $('<li>');
+            line.text(highScores[index]);
+            scoreList.append(line);
+    }
+}
+
+var resetHighscores = () => {
+    var highScores = localStorage.setItem('highScores','');
+    showHighscorePage();
+}
+
+var showHomepage = () => {
+$('#homePage').show();
+$('#quizPages').hide();
+$('#myScorePage').hide();
+$('#highscorePage').hide();
 }

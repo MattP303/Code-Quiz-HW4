@@ -5,3 +5,38 @@
 .show {
     display: block;
 }
+
+#homePage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#btn-highscore{
+    margin: 100px;
+}
+
+.container h1 {
+    text-align: center;
+}
+
+.container p {
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.startButton {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+}
+
+#homePage {
+    margin-top: 15%;
+}
+
+header {
+    padding: 1%;
+}

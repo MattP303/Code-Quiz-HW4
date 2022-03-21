@@ -19,19 +19,19 @@
 
 <body>
     <header>
-    <!-- Timer Countdown -->
-    <button type="button" class="btn btn-primary btn-highscore">View High Score(s)</button>
+    <!-- Go to high scores -->
+    <button onclick="showHighscorePage()" type="button" class="btn btn-primary btn-highscore">View High Score(s)</button>
 
     </header>
 
-    <container id="homePage">
+    <container id="homePage" class="container">
         <!-- Title of quiz -->
         <h1>Coding Quiz Challenge</h1>
 
         <!-- Quiz Instructions -->
         <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time by 10 seconds!</p>
        
-        <button onclick="startQuiz()" type="button" class="btn btn-success">Start Quiz</button>
+        <button onclick="startQuiz()" type="button" class="btn btn-success startButton">Start Quiz</button>
 
     </container>
 
@@ -58,6 +58,12 @@
         <!-- View High Score(s) -->
     <container id="highscorePage">
         <h1>High Scores</h1>
+        <ul class="scoreList">
+
+        </ul>
+        <button onclick="showHomepage()" type="button" class="btn btn-primary btn-highscore">Play Again</button>
+        <button onclick="resetHighscores()" type="button" class="btn btn-primary btn-highscore">Clear High Scores</button>
+
     </container>
 
 </body>
