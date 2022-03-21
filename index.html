@@ -7,21 +7,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css"
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" <script
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script src="script.js" defer></script>
 
 </head>
 
 <body>
     <header>
-    <!-- Go to high scores -->
-    <button onclick="showHighscorePage()" type="button" class="btn btn-primary btn-highscore">View High Score(s)</button>
+        <!-- Go to high scores -->
+        <div class="row">
+            <div class="col-9"><button onclick="showHighscorePage()" type="button"
+                    class="btn btn-primary btn-highscore">View High Score(s)</button>
+            </div>
+            <div class="col-2 timer">
+                <label class="timeRemaining">Time Remaining </label>
+                <label class="currentTime"></label></div>
+        </div>
 
+
+        </div>
     </header>
 
     <container id="homePage" class="container">
@@ -29,42 +46,49 @@
         <h1>Coding Quiz Challenge</h1>
 
         <!-- Quiz Instructions -->
-        <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your time by 10 seconds!</p>
-       
+        <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers
+            will penalize your time by 10 seconds!</p>
+
         <button onclick="startQuiz()" type="button" class="btn btn-success startButton">Start Quiz</button>
 
     </container>
 
     <!-- Quiz Question Layout -->
-    <container id="quizPages">
+    <container id="quizPages" class="container">
         <h2 class="questionHeader"></h2>
         <div class="btn-group-vertical answerOptions">
-        
+
         </div>
         <div class="priorAnswer">
 
         </div>
     </container>
 
-    <container id="myScorePage">
+    <container id="myScorePage" class="container">
         <h2>Game Over!</h2>
-        <h3>Your score is</h3>
-        <h3>Enter Initials:</h3>
-        <label for="playerInitials">Email</label>
-        <input type="text" class="form-control" id="playerInitials" placeholder="Enter Initials">
-        <button type="button" class="btn btn-primary" onclick="saveScore()">Submit</button>
-
+        <h3 class="myScoreIs">Your score is</h3>
+        <div class="row">
+            <div class="col-4">
+                <input type="text" class="form-control" id="playerInitials" placeholder="Enter Initials">
+            </div>
+            <button type="button" class="btn btn-primary col-2 submitBtn" onclick="saveScore()">Submit</button>
+        </div>
     </container>
-        <!-- View High Score(s) -->
-    <container id="highscorePage">
+    <!-- View High Score(s) -->
+    <container id="highscorePage" class="container">
         <h1>High Scores</h1>
-        <ul class="scoreList">
+        <div class="row">
+            <ul class="scoreList">
 
-        </ul>
-        <button onclick="showHomepage()" type="button" class="btn btn-primary btn-highscore">Play Again</button>
-        <button onclick="resetHighscores()" type="button" class="btn btn-primary btn-highscore">Clear High Scores</button>
-
+            </ul>
+        </div>
+        <div class="scoresButtons row">
+            <button onclick="showHomepage()" type="button" class="btn btn-primary btn-highscore ">Play Again</button>
+            <button onclick="resetHighscores()" type="button" class="btn btn-primary btn-highscore ">Clear High
+                Scores</button>
+        </div>
     </container>
 
 </body>
+
 </html>

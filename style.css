@@ -16,7 +16,7 @@
     margin: 100px;
 }
 
-.container h1 {
+.container h1,h2,h3 {
     text-align: center;
 }
 
@@ -33,10 +33,73 @@
     margin-top: 2%;
 }
 
+.answerOptions {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+
+.answerOptions .btn {
+    margin: 5%;
+}
+
+.priorAnswer {
+    margin-top: 2%;
+    text-align: center;
+}
+
 #homePage {
     margin-top: 15%;
 }
 
 header {
     padding: 1%;
+}
+
+#myScorePage .row {
+    display: flex;
+    margin-top: 3%;
+    justify-content: center;
+}
+
+#highscorePage {
+    /* display: flex;
+    justify-content: center; */
+}
+
+.scoresButtons .btn {
+    margin: 25px;
+    width: max-content;
+}
+
+.scoresButtons {
+    display: flex;
+    justify-content: center;
+}
+
+.scoreList {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+.scoreList li {
+    flex-direction: column;
+}
+
+.timer {
+    display: flex;
+    align-content: flex-end;
+}
+
+.timeRemaining {
+    color: blue;
+    font-size: large;
+}
+
+.currentTime {
+    margin-left: 5px;
+    font-size: large;
+    color: blue;
 }
