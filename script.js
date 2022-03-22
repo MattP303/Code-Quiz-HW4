@@ -21,7 +21,7 @@ var questions = [
     answer: 1,
   },
   {
-    question: "How do you write a conditional statement for executing some statements only if "i" is equal to 5?",
+    question: "How do you write a conditional statement for executing some statements only if i is equal to 5?",
     answerOptions: ["if i==5 then", "if (i==5)", "if i=5 then", "if i=5"],
     answer: 1,
   },
