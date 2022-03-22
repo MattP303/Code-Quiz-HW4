@@ -6,63 +6,63 @@ $("#highscorePage").hide();
 
 var questions = [
   {
-    question: "This is a question 1",
-    answerOptions: ["option1", "option2", "option3", "option4"],
+    question: "Inside which HTML element do we put the JavaScript?",
+    answerOptions: ["<javascript>", "<js>", "<script>", "<scripting>"],
+    answer: 2,
+  },
+  {
+    question: "How do you create a function?",
+    answerOptions: ["function:myFunction()", "function=myFunction()", "function myFunction()", "myFunction():function"],
+    answer: 2,
+  },
+  {
+    question: "How do you call a function named myFunction?",
+    answerOptions: ["call myFunction()", "myFunction()", "call function myFunction", "Call.myFunction()"],
+    answer: 1,
+  },
+  {
+    question: "How do you write a conditional statement for executing some statements only if "i" is equal to 5?",
+    answerOptions: ["if i==5 then", "if (i==5)", "if i=5 then", "if i=5"],
+    answer: 1,
+  },
+  {
+    question: "How do you write a conditional statement for executing some statements only if i is NOT equal to 5?",
+    answerOptions: ["if (i != 5)", "if =! 5 then", "if (i <> 5)", "if <>5"],
     answer: 0,
   },
   {
-    question: "This is a question 2",
-    answerOptions: ["option1", "option2", "option3", "option4"],
+    question: "How does a for loop start?",
+    answerOptions: ["for (i = 0; i <= 5)", "for (i = 0; i <= 5; i++)", "for i = 1 to 5", "for (i <= 5; i++)"],
+    answer: 1,
+  },
+  {
+    question: "Which HTML tag displays the largest text?",
+    answerOptions: ["<H1>", "<H3>", "<H6>", "<H100>"],
     answer: 0,
   },
   {
-    question: "This is a question 3",
-    answerOptions: ["option1", "option2", "option3", "option4"],
+    question: "Inside which HTML element do we put the JavaScript?",
+    answerOptions: ["<javascript>", "<js>", "<script>", "<scripting>"],
+    answer: 2,
+  },
+  {
+    question: "How do you create a function?",
+    answerOptions: ["function:myFunction()", "function=myFunction()", "function myFunction()", "myFunction():function"],
+    answer: 2,
+  },
+  {
+    question: "How do you call a function named myFunction?",
+    answerOptions: ["call myFunction()", "myFunction()", "call function myFunction", "Call.myFunction()"],
+    answer: 1,
+  },
+  {
+    question: "Which of these HTML tags will display the smallest size?",
+    answerOptions: ["<H1>", "<H3>", "<H6>", "<H100>"],
     answer: 0,
   },
   {
-    question: "This is a question 4",
-    answerOptions: ["option1", "option2", "option3", "option4"],
-    answer: 0,
-  },
-  {
-    question: "This is a questio 5",
-    answerOptions: ["option1", "option2", "option3", "option4"],
-    answer: 0,
-  },
-  {
-    question: "This is a question 6",
-    answerOptions: ["option1", "option2", "option3", "option4"],
-    answer: 0,
-  },
-  {
-    question: "This is a question 7",
-    answerOptions: ["option1", "option2", "option3", "option4"],
-    answer: 0,
-  },
-  {
-    question: "This is a question 8",
-    answerOptions: ["option1", "option2", "option3", "option4"],
-    answer: 0,
-  },
-  {
-    question: "This is a question 9",
-    answerOptions: ["option1", "option2", "option3", "option4"],
-    answer: 0,
-  },
-  {
-    question: "This is a question 10",
-    answerOptions: ["option1", "option2", "option3", "option4"],
-    answer: 0,
-  },
-  {
-    question: "This is a question 11",
-    answerOptions: ["option1", "option2", "option3", "option4"],
-    answer: 0,
-  },
-  {
-    question: "This is a question 12",
-    answerOptions: ["option1", "option2", "option3", "option4"],
+    question: "A ___ is one or more style rules that is applied to an HTML document",
+    answerOptions: ["CSS", "Script", "Style Sheet", "Design"],
     answer: 0,
   },
 ];
@@ -114,7 +114,7 @@ var chosenAnswer = (index) => {
       .text("Wrong Answer")
       .addClass("text-danger")
       .removeClass("text-success");
-      timeLeft = (timeLeft>5)?timeLeft-5:0;
+      timeLeft = (timeLeft>10)?timeLeft-10:0;
   }
 
   if (questionCurrent < questions.length - 1) {
