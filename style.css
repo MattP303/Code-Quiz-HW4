@@ -94,12 +94,19 @@ header {
 }
 
 .timeRemaining {
-    color: blue;
+    color: white;
     font-size: large;
+    background-color: #0168D9;
+    padding: 5px;
+    border-radius: 10px;
 }
 
 .currentTime {
     margin-left: 5px;
     font-size: large;
-    color: blue;
+    color: #0168D9;
+    /* background-color: #0168D9; */
+    padding: 5px;
+    border-radius: 10px;
+    min-width: 33px;
 }
