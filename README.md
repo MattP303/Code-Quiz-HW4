@@ -12,6 +12,6 @@ Developer contact: mattmakescode@gmail.com
 License: MIT
 
 What does it look like?
-![Screenshot](./Screen Shot codeQuiz 6.34.30 PM.png)
-![Screenshot](./Screen Shot codeQuiz 6.34.41 PM.png)
-![Screenshot](./Screen Shot codeQuiz 6.35.55 PM.png)
+![Screenshot](./Screen%20Shot%20codeQuiz%206.34.30%20PM.png)
+![Screenshot](./Screen%20Shot%20codeQuiz%206.34.41%20PM.png)
+![Screenshot](./Screen%20Shot%20codeQuiz%206.35.55%20PM.png)
