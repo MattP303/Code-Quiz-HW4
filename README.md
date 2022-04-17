@@ -9,6 +9,8 @@ Live Link: https://mattp303.github.io/Weather-Dashboard/
 
 Developer contact: mattmakescode@gmail.com
 
+Technologies Used: HTML, CSS, JS, Bootstrap
+
 License: MIT
 
 What does it look like?
